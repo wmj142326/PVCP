@@ -9,8 +9,14 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 
 ## PVCP Dataset
 ![PVCP](image/PVCP_dataset.png)
-We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools)
 ![PVCP](image/dataset_pipline.png)
+
+We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools)
+
+Download the PVCP Dataset: [PVCP_Dataset](https://github.com/)
+
+
+
 
 
 ## PPSENet Framework
