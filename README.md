@@ -11,10 +11,10 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 ![PVCP](image/PVCP_dataset.png)
 ![PVCP](image/dataset_pipline.png)
 
-We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools)
+We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools).
 
 Download the PVCP Dataset: [PVCP_Dataset](https://github.com/).
-Directory structure:：
+Directory structure:
 
 ```python
 PVCP
@@ -71,20 +71,20 @@ For the `frame` folder, run `image2frame.py`. The folder structure is as follows
 
 <table>
   <tr>
-    <td><img src="image/seq_1.png" alt="PNG 1" width="350"/></td>
-    <td><img src="image/seq_2.png" alt="PNG 2" width="350"/></td>
+    <td><img src="image/seq_1.png" alt="PNG 1" width="400"/></td>
+    <td><img src="image/seq_2.png" alt="PNG 2" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="image/50.gif" alt="GIF 1" width="350"/></td>
-    <td><img src="image/54.gif" alt="GIF 2" width="350"/></td>
+    <td><img src="image/50.gif" alt="GIF 1" width="400"/></td>
+    <td><img src="image/54.gif" alt="GIF 2" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="image/63.gif" alt="GIF 3" width="350"/></td>
-    <td><img src="image/74.gif" alt="GIF 4" width="350"/></td>
+    <td><img src="image/63.gif" alt="GIF 3" width="400"/></td>
+    <td><img src="image/74.gif" alt="GIF 4" width="400"/></td>
   </tr>
   <tr>
-    <td><img src="image/72.gif" alt="GIF 5" width="350"/></td>
-    <td><img src="image/87.gif" alt="GIF 6" width="350"/></td>
+    <td><img src="image/72.gif" alt="GIF 5" width="400"/></td>
+    <td><img src="image/87.gif" alt="GIF 6" width="400"/></td>
   </tr>
 </table>
 
