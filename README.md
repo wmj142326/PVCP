@@ -36,7 +36,7 @@ Download the PVCP Dataset: [PVCP_Dataset](https://github.com/)
 <table>
   <tr>
     <td><img src="image/seq_1.png" alt="PNG 1" width="350"/></td>
-    <td><img src="image/Seq_2.png" alt="PNG 2" width="350"/></td>
+    <td><img src="image/seq_2.png" alt="PNG 2" width="350"/></td>
   </tr>
   <tr>
     <td><img src="image/50.gif" alt="GIF 1" width="350"/></td>
