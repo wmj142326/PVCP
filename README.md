@@ -29,16 +29,16 @@ We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github
 
 <table>
   <tr>
-    <td><img src="image/50.gif" alt="GIF 1" width="300"/></td>
-    <td><img src="image/54.gif" alt="GIF 2" width="300"/></td>
+    <td><img src="image/50.gif" alt="GIF 1" width="350"/></td>
+    <td><img src="image/54.gif" alt="GIF 2" width="350"/></td>
   </tr>
   <tr>
-    <td><img src="image/63.gif" alt="GIF 3" width="300"/></td>
-    <td><img src="image/74.gif" alt="GIF 4" width="300"/></td>
+    <td><img src="image/63.gif" alt="GIF 3" width="350"/></td>
+    <td><img src="image/74.gif" alt="GIF 4" width="350"/></td>
   </tr>
   <tr>
-    <td><img src="image/72.gif" alt="GIF 5" width="300"/></td>
-    <td><img src="image/87.gif" alt="GIF 6" width="300"/></td>
+    <td><img src="image/72.gif" alt="GIF 5" width="350"/></td>
+    <td><img src="image/87.gif" alt="GIF 6" width="350"/></td>
   </tr>
 </table>
 
