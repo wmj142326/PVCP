@@ -30,7 +30,7 @@ We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github
 <table>
   <tr>
     <td><img src="image/seq_1.png" alt="PNG 1" width="350"/></td>
-    <td><img src="image/Seq_2.png" alt="PNG 2" width="350"/></td>
+    <td><img src="image/Seq_1.png" alt="PNG 2" width="350"/></td>
   </tr>
   <tr>
     <td><img src="image/50.gif" alt="GIF 1" width="350"/></td>
