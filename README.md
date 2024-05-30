@@ -71,20 +71,20 @@ For the `frame` folder, run `image2frame.py`. The folder structure is as follows
 
 <table>
   <tr>
-    <td><img src="image/seq_1.png" alt="PNG 1" width="400"/></td>
-    <td><img src="image/seq_2.png" alt="PNG 2" width="400"/></td>
+    <td><img src="image/seq_1.png" alt="PNG 1" width="380"/></td>
+    <td><img src="image/seq_2.png" alt="PNG 2" width="380"/></td>
   </tr>
   <tr>
-    <td><img src="image/50.gif" alt="GIF 1" width="400"/></td>
-    <td><img src="image/54.gif" alt="GIF 2" width="400"/></td>
+    <td><img src="image/50.gif" alt="GIF 1" width="380"/></td>
+    <td><img src="image/54.gif" alt="GIF 2" width="380"/></td>
   </tr>
   <tr>
-    <td><img src="image/63.gif" alt="GIF 3" width="400"/></td>
-    <td><img src="image/74.gif" alt="GIF 4" width="400"/></td>
+    <td><img src="image/63.gif" alt="GIF 3" width="380"/></td>
+    <td><img src="image/74.gif" alt="GIF 4" width="380"/></td>
   </tr>
   <tr>
-    <td><img src="image/72.gif" alt="GIF 5" width="400"/></td>
-    <td><img src="image/87.gif" alt="GIF 6" width="400"/></td>
+    <td><img src="image/72.gif" alt="GIF 5" width="380"/></td>
+    <td><img src="image/87.gif" alt="GIF 6" width="380"/></td>
   </tr>
 </table>
 
