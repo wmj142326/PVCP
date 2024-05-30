@@ -16,7 +16,7 @@ We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github
 Download the PVCP Dataset: [PVCP_Dataset](https://github.com/).
 Directory structure:
 
-```python
+```shell script
 PVCP
 ├── annotation
 │   ├── dataset_2d.json
@@ -41,7 +41,7 @@ PVCP
 └── vis_2dkpt_ann.mp4
 ```
 For the `frame` folder, run `image2frame.py`. The folder structure is as follows:
-```python
+```shell script
 
 ├── frame
    ├── frame_000000.png
