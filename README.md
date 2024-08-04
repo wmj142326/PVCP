@@ -9,10 +9,10 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 
 ## PVCP Dataset
 ![PVCP](image/PVCP_dataset.png)
-We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools).
+We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://anonymous.4open.science/r/SMPL_Tools-0C7A).
 
 Download the PVCP Dataset: [PVCP_Dataset](https://github.com/).
-Directory structure:
+Directory structure: (Coming soon...)
 
 ```shell script
 PVCP
@@ -50,17 +50,27 @@ For the `frame` folder, run `image2frame.py`. The folder structure is as follows
 ```
 ## PPSENet Framework
 ![PPSENet](image/framework_pipline.png)
-### ITP
 
-### PTM
+## Train: 
+Finetune from a pretrained model with PVCP
+```shell script
+CUDA_VISIBLE_DEVICES=0,1,2,3 python train_mesh_pvcp.py \
+--config configs/mesh/MB_ft_pvcp.yaml \
+--pretrained checkpoint/pretrain/MB_release \
+--checkpoint mycheckpoint/mesh
+```
 
-## Model Zoo
+## Evaluate
+```shell script
+CUDA_VISIBLE_DEVICES=0,1,2,3 python train_mesh_pvcp.py \
+--config configs/mesh/MB_ft_pvcp.yaml \
+--evaluate checkpoint/mesh/best_epoch.bin 
+```
 
-## Training
-
-## Testing
-
-## Demo
+## Test and Demo
+```shell script
+python infer_wild_mesh_list.py --out_path myoutput/qualitation/mesh_pvcp_test_from_2ddet
+```
 
 ## Visual
 
