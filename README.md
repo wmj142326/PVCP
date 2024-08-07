@@ -12,8 +12,8 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 ![PVCP](image/PVCP_dataset.png)
 We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://anonymous.4open.science/r/SMPL_Tools-0C7A).
 
-Download the PVCP Dataset: [PVCP_Dataset](https://github.com/).
-Directory structure: (Coming soon...)
+Download the PVCP Dataset: [PVCP_Dataset (Coming soon...)](https://github.com/).
+Directory structure: 
 
 ```commandline
 PVCP
@@ -88,9 +88,9 @@ PVCP
 ### Data
 1. Download the other datasets [here](https://1drv.ms/f/s!AvAdh0LSjEOlfy-hqlHxdVMZxWM) and put them to  `data/mesh/`. We use Human3.6M, COCO, and PW3D for training and testing. Descriptions of the joint regressors could be found in [SPIN](https://github.com/nkolot/SPIN/tree/master/data).
 2. Download the SMPL model(`basicModel_neutral_lbs_10_207_0_v1.0.0.pkl`) from [SMPLify](https://smplify.is.tue.mpg.de/), put it  to `data/mesh/`, and rename it as `SMPL_NEUTRAL.pkl`
-3. Download the PVCP dataset [here]() and put them to  `data/pvcp/`. mv `mesh_det_pvcp_train_release.pkl` and `mesh_det_pvcp_train_gt2d_test_det2d.pkl` to `data/mesh/`.
+3. Download the PVCP dataset [here (Coming soon...)](https://github.com/) and put them to  `data/pvcp/`. mv `mesh_det_pvcp_train_release.pkl` and `mesh_det_pvcp_train_gt2d_test_det2d.pkl` to `data/mesh/`.
     
-4. Final, `data` directory structure as follows:
+4. You can also download our `data (Coming soon...)` and `checkpoint (Coming soon...)` folders directly. Final, `data` directory structure as follows:
     ```commandline
     ├── data
         ├── mesh
