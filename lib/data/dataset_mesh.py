@@ -76,7 +76,17 @@ class SMPLDataset(Dataset):
                                     # 'img_feature' :img_feature_test
                                     }
                                     }[data_split]
+        if dataset=="pedx":
+            pose_class_train = dt['train']['pose_class'][split_id_train]
+            pose_class_test = dt['test']['pose_class'][split_id_test]
+            
+            self.motion_sensor = { 'train':{
+                                    'pose_class': pose_class_train}, 
+                                    'test': {
+                                    'pose_class': pose_class_test,
+                                    }}[data_split]
 
+        
         self.smpl = SMPL(
             args.data_root,
             batch_size=1,

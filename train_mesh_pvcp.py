@@ -461,7 +461,7 @@ def train_with_config(args, opts):
             if hasattr(args, "dt_file_coco") and epoch < args.warmup_coco:
                 print("===========>training  coco..." )
                 train_epoch(args, opts, model, train_loader_coco, losses_train, losses_dict, mpjpes, mpves, criterion, optimizer, batch_time, data_time, epoch)
-                test_loss, test_mpjpe, test_pa_mpjpe, test_mpve, test_pa_mpve, test_losses_dict, test_err_str_coco = validate(test_loader, model, criterion, 'coco')
+                test_loss, test_mpjpe, test_pa_mpjpe, test_mpve, test_pa_mpve, test_losses_dict, test_err_str_coco = validate(test_loader_coco, model, criterion, 'coco')
                 with open(os.path.join(opts.checkpoint, f'result_coco.txt'), 'a', encoding='utf-8') as f:  
                     if epoch==0 or epoch==args.epochs-1:
                         f.write("---"*20 + f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}' + "---"*20 + "\n")
@@ -576,3 +576,18 @@ if __name__ == "__main__":
     set_random_seed(opts.seed)
     args = get_config(opts.config)
     train_with_config(args, opts)
+    
+    
+"""
+CUDA_VISIBLE_DEVICES=0,1 python train_mesh.py \
+--config configs/mesh/MB_ft_pvcp.yaml \
+--pretrained checkpoint/pretrain/MB_release \
+--checkpoint myoutput/mycheckpoint/e3_2/ft_pvcp_iter3_class0.1_gt_release/best_epoch.bin
+
+
+--evaluate
+CUDA_VISIBLE_DEVICES=0,1 python train_mesh.py \
+--config configs/mesh/MB_ft_pvcp.yaml \
+--evaluate myoutput/mycheckpoint/e3_2/ft_pvcp_iter3_class0.1_gt_release/best_epoch.bin
+
+"""

@@ -34,15 +34,15 @@ from scipy.optimize import least_squares
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, default="configs/mesh/MB_ft_pvcp.yaml", help="Path to the config file.")
-    parser.add_argument('-e', '--evaluate', default='myoutput/mycheckpoint/FT_pvcp_release/best_epoch.bin', type=str, metavar='FILENAME', help='checkpoint to evaluate (file name)')
-    parser.add_argument('-j', '--json_path', type=str, default = 'myoutput/qualitation_pvcp/mb_input_det_pose.json', help='alphapose detection result json path')
+    parser.add_argument('-e', '--evaluate', default='checkpoint/mesh/ft_pvcp_iter3_class0.1_gt_release/best_epoch.bin', type=str, metavar='FILENAME', help='checkpoint to evaluate (file name)')
+    parser.add_argument('-j', '--json_path', type=str, default = 'data/pvcp/annotation/mb_input_det_pose.json', help='alphapose detection result json path')
     # parser.add_argument('-v', '--vid_path', type=str, help='video path')
     parser.add_argument('-o', '--out_path', type=str, help='output path')
     parser.add_argument('--ref_3d_motion_path', type=str, default=None, help='3D motion path')
     parser.add_argument('--pixel', action='store_true', help='align with pixle coordinates')
     parser.add_argument('--focus', type=int, default=None, help='target person id')
     parser.add_argument('--clip_len', type=int, default=243, help='clip length for network input')
-    parser.add_argument('--compare', default="myoutput/qualitation_pvcp/my_compare",  help='compare 2d_pose and mesh')
+    parser.add_argument('--compare', default="compare",  help='compare 2d_pose and mesh')
     parser.add_argument('--split', default="test", help='dataset split choose')
 
     opts = parser.parse_args()
@@ -99,12 +99,12 @@ testloader_params = {
         'persistent_workers': True,
         'drop_last': False
 }
-# ---------------------------------Batch processing----------------------------------------------
+# ---------------------------------batch processing----------------------------------------------
 
-frame_folder = "data/dataset_pvcp/frame"
-image_folder = "data/dataset_pvcp/image"
-video_folder = "data/dataset_pvcp/video"
-train_test_list = "data/mesh/train_test_seq_id_list.json"
+frame_folder = "data/pvcp/frame"
+image_folder = "data/pvcp/image"
+video_folder = "data/pvcp/video"
+train_test_list = "data/pvcp/annotation/train_test_seq_id_list.json"
 
 json_data = json.load(open(opts.json_path))
 idx_groups = get_idx_groups(json_data)
@@ -123,9 +123,9 @@ for idx_key, idx_val in sorted(idx_groups.items()):
     shape_all = []
     pose_all= []
     
-    print(f"-------------------idx={idx_key}/{len(idx_groups)} {len(idx_val)}-------------------------")
+    print(f"-------------------idx={idx_key} {len(idx_val)}-------------------------")
     # if idx_key not in split_list:continue
-    # if idx_key !=92:continue
+    # if idx_key !=10:continue
     frame_id_list = [int(frame.split(".")[0].split("_")[-1]) for frame, label in idx_val]
     consecutive_frame_list, consecutive_frame_idx = find_longest_consecutive_subset_with_gap(frame_id_list,gap=2)
     idx_val = [idx_val[i] for i in consecutive_frame_idx]
@@ -149,7 +149,6 @@ for idx_key, idx_val in sorted(idx_groups.items()):
     with torch.no_grad():
         for batch_input in tqdm(test_loader):
             start_time = time.time()
-            print(batch_input.shape)
             batch_size, clip_frames = batch_input.shape[:2]
             if torch.cuda.is_available():
                 batch_input = batch_input.cuda().float()
@@ -210,9 +209,9 @@ for idx_key, idx_val in sorted(idx_groups.items()):
     render_and_save(verts_all, osp.join(opts.out_path, opts.split, f'{idx_key}_mesh.mp4'), keep_imgs=False, fps=fps_in, draw_face=True, vid_size=vid_size)
     
 
-    tmp_img_path = osp.join(opts.compare, opts.split, f"tmp_img_{idx_key}")
-    tmp_vid_path = osp.join(opts.compare, opts.split, f"tmp_vid_{idx_key}")
-    compare_video_path = osp.join(opts.compare,opts.split,"compare_video")
+    tmp_img_path = osp.join(opts.out_path, opts.split, opts.compare, f"tmp_img_{idx_key}")
+    tmp_vid_path = osp.join(opts.out_path, opts.split, opts.compare, f"tmp_vid_{idx_key}")
+    compare_video_path = osp.join(opts.out_path, opts.split, opts.compare, "compare_video")
     os.makedirs(tmp_img_path, exist_ok=True)
     os.makedirs(tmp_vid_path, exist_ok=True)
     os.makedirs(compare_video_path, exist_ok=True)
@@ -225,13 +224,11 @@ for idx_key, idx_val in sorted(idx_groups.items()):
         data_mesh[frame]["keypoint_3d_smpl"] = reg3d_all[index]
         data_mesh[frame]["verts"] = verts_all[index]
         
-        mesh_folder = osp.join(opts.out_path, 'obj', f'{idx_key}')
+        mesh_folder = osp.join(opts.out_path, opts.split, 'obj', f'{idx_key}')
         os.makedirs(mesh_folder, exist_ok=True)
         mesh_filename=osp.join(mesh_folder, f"{frame.split('.')[0]}.obj")
         
-        # 在您的代码中保存顶点数据为.obj文件的部分之后
         if mesh_filename is not None:
-            # 创建一个Trimesh对象，使用从SMPL估计模型获得的顶点数据和固定的面数据（faces）
             mesh_to_save = trimesh.Trimesh(vertices=data_mesh[frame]["verts"]*0.001, faces=smpl.faces)
             mesh_to_save.export(mesh_filename)       
 
@@ -257,7 +254,3 @@ for idx_key, idx_val in sorted(idx_groups.items()):
     # delete_directory(tmp_vid_path)
 
 save_to_json(data_mesh, file_path=f'{opts.out_path}/data_mesh_pvc.json')
-
-"""
-python infer_wild_mesh_list.py --out_path myoutput/qualitation/mesh_pvcp_test_from_2ddet_rebuttal
-"""
