@@ -5,6 +5,14 @@
 ![python = 3.7.16](https://img.shields.io/badge/python-3.7.16-green)
 ![torch = 1.11.0+cu113](https://img.shields.io/badge/torch-1.11.0%2Bcu113-yellowgreen)
 
+```commandline
+conda create -n PVCP_env python=3.7
+conda activate PVCP_env
+
+# Please install PyTorch according to your CUDA version.
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install -r requirements.txt
+```
 Some of our code and dependencies was adapted from [MotionBERT](https://github.com/Walter0807/MotionBERT). 
 
 
