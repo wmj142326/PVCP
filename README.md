@@ -1,4 +1,4 @@
-# Pedestrian-Centric 3D Pre-collision Pose and Shape Estimation from Dashcam Perspective
+# 🤸‍♂️💥🚗 Pedestrian-Centric 3D Pre-collision Pose and Shape Estimation from Dashcam Perspective
 
 
 ## Dependencies
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 Some of our code and dependencies was adapted from [MotionBERT](https://github.com/Walter0807/MotionBERT). 
 
 
-## PVCP Dataset
+## 🔗 PVCP Dataset
 ![PVCP](image/PVCP_dataset.png)
 We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://anonymous.4open.science/r/SMPL_Tools-0C7A).
 
@@ -58,7 +58,7 @@ For the `frame` folder, run `image2frame.py`. The folder structure is as follows
    ├── ...
    └── frame_042510.png
 ```
-## PPSENet Framework
+## 🕸️ PPSENet Framework
 ![PPSENet](image/framework_pipline.png)
 
 ### Project Directory Structure
@@ -76,14 +76,7 @@ PVCP
 │   ├── model
 │   └── utils
 ├── params
-│   ├── d2c_params.pkl
-│   └── synthetic_noise.pth
 ├── tools
-│   ├── compress_amass.py
-│   ├── convert_amass.py
-│   ├── convert_h36m.py
-│   ├── convert_insta.py
-│   └── preprocess_amass.py
 ├── LICENSE
 ├── README_MotionBERT.md
 ├── requirements.txt
@@ -144,7 +137,7 @@ python infer_wild_mesh_list.py --out_path output/
 ```
 
 
-### Visual
+### 👀 Visual
 
 <table>
   <tr>
