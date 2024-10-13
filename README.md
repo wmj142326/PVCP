@@ -20,7 +20,7 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 ![PVCP](image/PVCP_dataset.png)
 We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://anonymous.4open.science/r/SMPL_Tools-0C7A).
 
-Download the PVCP Dataset: [PVCP_Dataset (Coming soon...)](https://github.com/).
+Download the [PVCP Dataset (≈43G)](https://pan.baidu.com/s/1lNr5ak7_HtSy1CHQ3J20Gw?pwd=PVCP).
 Directory structure: 
 
 ```commandline
@@ -58,6 +58,14 @@ For the `frame` folder, run `image2frame.py`. The folder structure is as follows
    ├── ...
    └── frame_042510.png
 ```
+
+### 🚩 Stay Tuned For:
+
+- [ ] `We are working on more refined gesture labeling.`
+- [ ] `We will add more types of annotation information.`
+- [ ] `... `
+
+
 ## 🕸️ PPSENet Framework
 ![PPSENet](image/framework_pipline.png)
 
@@ -89,9 +97,9 @@ PVCP
 ### Data
 1. Download the other datasets [here](https://1drv.ms/f/s!AvAdh0LSjEOlfy-hqlHxdVMZxWM) and put them to  `data/mesh/`. We use Human3.6M, COCO, and PW3D for training and testing. Descriptions of the joint regressors could be found in [SPIN](https://github.com/nkolot/SPIN/tree/master/data).
 2. Download the SMPL model(`basicModel_neutral_lbs_10_207_0_v1.0.0.pkl`) from [SMPLify](https://smplify.is.tue.mpg.de/), put it  to `data/mesh/`, and rename it as `SMPL_NEUTRAL.pkl`
-3. Download the PVCP dataset [here (Coming soon...)](https://github.com/) and put them to  `data/pvcp/`. mv `mesh_det_pvcp_train_release.pkl` and `mesh_det_pvcp_train_gt2d_test_det2d.pkl` to `data/mesh/`.
+3. Download the `PVCP dataset` and put them to  `data/pvcp/`. mv `mesh_det_pvcp_train_release.pkl` and `mesh_det_pvcp_train_gt2d_test_det2d.pkl` to `data/mesh/`.
     
-4. You can also download our `data (Coming soon...)` and `checkpoint (Coming soon...)` folders directly. Final, `data` directory structure as follows:
+4. You can also download our [data (include PVCP Dataset)](https://pan.baidu.com/s/1ysA3koyoMfAXnsM2KKvI_Q?pwd=2024) and [checkpoint](https://pan.baidu.com/s/1XthmAOLRvI2MCLop53I-VQ?pwd=h0aa) folders directly. Final, `data` directory structure as follows:
     ```commandline
     ├── data
         ├── mesh
@@ -113,7 +121,6 @@ PVCP
             ├── image
             └── video
     ```
-
 
 ### Train: 
 Finetune from a pretrained model with PVCP
@@ -159,4 +166,4 @@ python infer_wild_mesh_list.py --out_path output/
 </table>
 
 
-Our paper is undergoing a double-blind review and all links will be published after publication.
+🎉 Our paper has been accepted by NeurIPS 2024!
