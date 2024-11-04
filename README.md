@@ -99,7 +99,7 @@ PVCP
 2. Download the SMPL model(`basicModel_neutral_lbs_10_207_0_v1.0.0.pkl`) from [SMPLify](https://smplify.is.tue.mpg.de/), put it  to `data/mesh/`, and rename it as `SMPL_NEUTRAL.pkl`
 3. Download the `PVCP dataset` and put them to  `data/pvcp/`. mv `mesh_det_pvcp_train_release.pkl` and `mesh_det_pvcp_train_gt2d_test_det2d.pkl` to `data/mesh/`.
     
-4. You can also download our [data (include PVCP Dataset)](https://pan.baidu.com/s/1ysA3koyoMfAXnsM2KKvI_Q?pwd=2024) and [checkpoint](https://pan.baidu.com/s/1XthmAOLRvI2MCLop53I-VQ?pwd=h0aa) folders directly. Final, `data` directory structure as follows:
+* You can also skip the above steps and download our [data (include PVCP Dataset)](https://pan.baidu.com/s/1ysA3koyoMfAXnsM2KKvI_Q?pwd=2024) and [checkpoint](https://pan.baidu.com/s/1XthmAOLRvI2MCLop53I-VQ?pwd=h0aa) folders directly. Final, `data` directory structure as follows:
     ```commandline
     ├── data
         ├── mesh
