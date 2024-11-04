@@ -115,8 +115,12 @@ PVCP
         │   └── SMPL_NEUTRAL.pkl
         └── pvcp
             ├── annotation
+            │   ├── dataset_pose.json
+            │   ├── dataset_mesh.json
             │   ├── mb_input_det_pose.json
-            │   └── train_test_seq_id_list.json
+            │   ├── train_test_seq_id_list.json
+            │   ├── mesh_det_pvcp_train_release.pkl
+            │   └── mesh_det_pvcp_train_gt2d_test_det2d.pkl
             ├── frame
             ├── image
             └── video
