@@ -26,12 +26,12 @@ Directory structure:
 ```commandline
 PVCP
 ├── annotation
-│   ├── dataset_pose.json
-│   ├── dataset_mesh.json
+│   ├── dataset_2dpose.json
+│   ├── dataset_mesh (coming soon).json
 │   ├── mb_input_det_pose.json
 │   ├── train_test_seq_id_list.json
-│   ├── mesh_det_pvcp_train_release.pkl
-│   └── mesh_det_pvcp_train_gt2d_test_det2d.pkl
+│   ├── mesh_det_pvcp_train_release (coming soon).pkl
+│   └── mesh_det_pvcp_train_gt2d_test_det2d (coming soon).pkl
 ├── frame
 │   └── image2frame.py
 ├── image
@@ -115,12 +115,12 @@ PVCP
         │   └── SMPL_NEUTRAL.pkl
         └── pvcp
             ├── annotation
-            │   ├── dataset_pose.json
-            │   ├── dataset_mesh.json
+            │   ├── dataset_2dpose.json
+            │   ├── dataset_mesh (coming soon).json
             │   ├── mb_input_det_pose.json
             │   ├── train_test_seq_id_list.json
-            │   ├── mesh_det_pvcp_train_release.pkl
-            │   └── mesh_det_pvcp_train_gt2d_test_det2d.pkl
+            │   ├── mesh_det_pvcp_train_release (coming soon).pkl
+            │   └── mesh_det_pvcp_train_gt2d_test_det2d (coming soon).pkl
             ├── frame
             ├── image
             └── video
