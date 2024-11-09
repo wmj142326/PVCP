@@ -18,7 +18,7 @@ Some of our code and dependencies was adapted from [MotionBERT](https://github.c
 
 ## 🔗 PVCP Dataset
 ![PVCP](image/PVCP_dataset.png)
-We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://anonymous.4open.science/r/SMPL_Tools-0C7A).
+We have provided a special Tool for SMPL annotation: [SMPL_Tools](https://github.com/wmj142326/SMPL_Tools).
 
 Download the [PVCP Dataset (≈43G)](https://pan.baidu.com/s/1lNr5ak7_HtSy1CHQ3J20Gw?pwd=PVCP).
 Directory structure: 
