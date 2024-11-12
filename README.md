@@ -170,4 +170,11 @@ python infer_wild_mesh_list.py --out_path output/
 </table>
 
 
-🎉 Our paper has been accepted by NeurIPS 2024!
+### Citation
+   ```
+@inproceedings{wangpedestrian,
+  title={Pedestrian-Centric 3D Pre-collision Pose and Shape Estimation from Dashcam Perspective},
+  author={Wang, MeiJun and Meng, Yu and Qiu, Zhongwei and Zheng, Chao and Xu, Yan and Gao, Jian and others},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems}
+}
+   ```
