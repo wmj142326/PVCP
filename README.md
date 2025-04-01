@@ -172,12 +172,15 @@ python infer_wild_mesh_list.py --out_path output/
 
 ### Citation
    ```
-@inproceedings{
-        wang2024pedestriancentric,
-        title={Pedestrian-Centric 3D Pre-collision Pose and Shape Estimation from Dashcam Perspective},
-        author={MeiJun Wang and Yu Meng and Zhongwei Qiu and Chao Zheng and Yan Xu and Xiaorui Peng and Jian Gao},
-        booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-        year={2024},
-        url={https://openreview.net/forum?id=ldvfaYzG35}
+@inproceedings{NEURIPS2024_2c428bb0,
+     author = {Wang, Meijun and Meng, Yu and Qiu, Zhongwei and Zheng, Chao and Xu, Yan and Peng, Xiaorui and Gao, Jian},
+     booktitle = {Advances in Neural Information Processing Systems},
+     editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+     pages = {24868--24896},
+     publisher = {Curran Associates, Inc.},
+     title = {Pedestrian-Centric 3D Pre-collision Pose and Shape Estimation from Dashcam Perspective},
+     url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/2c428bb07062012236519b589db63f34-Paper-Conference.pdf},
+     volume = {37},
+     year = {2024}
 }
    ```
