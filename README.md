@@ -26,7 +26,7 @@ Directory structure:
 ```commandline
 PVCP
 ├── annotation
-│   ├── dataset_2dpose.json
+│   ├── dataset_2dpose.json  # {'bbox':C_x,C_y,w,h}; {'keypoint_3d': x_2d,y_2d,z_depth}; z_depth is from RootNet (https://github.com/mks0601/3DMPPE_ROOTNET_RELEASE)
 │   ├── dataset_mesh (coming soon).json
 │   ├── mb_input_det_pose.json
 │   ├── train_test_seq_id_list.json
